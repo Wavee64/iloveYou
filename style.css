@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.warper {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d6aed4;
+}
+.snow,
+.snow::after,
+.snow::before {
+  position: absolute;
+  top: -650px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: snowAni 3s linear;
+  animation-iteration-count: infinite;
+  background-size: 650px 650px;
+  background-image: radial-gradient(4px 4px at 100px 50px, #fff, transparent),
+    radial-gradient(6px 6px at 200px 150px, #fff, transparent),
+    radial-gradient(3px 3px at 300px 250px, #fff, transparent),
+    radial-gradient(4px 4px at 400px 350px, #fff, transparent),
+    radial-gradient(6px 6px at 500px 450px, #fff, transparent),
+    radial-gradient(3px 3px at 150px 100px, #fff, transparent),
+    radial-gradient(4px 4px at 250px 200px, #fff, transparent),
+    radial-gradient(6px 6px at 350px 350px, #fff, transparent),
+    radial-gradient(4px 4px at 100px 450px, #fff, transparent),
+    radial-gradient(6px 7px at 200px 150px, #fff, transparent),
+    radial-gradient(3px 8px at 320px 250px, #fff, transparent),
+    radial-gradient(4px 9px at 430px 350px, #fff, transparent),
+    radial-gradient(6px 6px at 570px 420px, #fff, transparent),
+    radial-gradient(3px 3px at 190px 150px, #fff, transparent),
+    radial-gradient(4px 4px at 210px 200px, #fff, transparent),
+    radial-gradient(6px 6px at 300px 350px, #fff, transparent),
+    radial-gradient(4px 4px at 120px 450px, #fff, transparent);
+}
+.snow::after {
+  margin-left: -250px;
+  opacity: 0.5;
+  filter: blur(2px);
+  animation-direction: reverse;
+  animation-duration: 5s;
+}
+.snow::before {
+  margin-left: -350px;
+  opacity: 0.8;
+  filter: blur(1px);
+  animation-direction: reverse;
+  animation-duration: 9s;
+}
+@keyframes snowAni {
+  from {
+    transform: translateY(650px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.list {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  background: linear-gradient(to right, #a2f3a2, #72cdda);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 10px;
+  flex-direction: column;
+  /* display: none; */
+}
+.btn:hover {
+  background: linear-gradient(180deg, #b69db6, #9beeea);
+}
+.list p {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.btn {
+  font-size: 1.7rem;
+  padding: 20px;
+  border-radius: 30px;
+  outline: none;
+  border: 1px solid violet;
+  cursor: pointer;
+  background: linear-gradient(90deg, red, #7db5db);
+  margin-top: 30px;
+  animation: animate 10s linear;
+}
+
+.content {
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  display: none;
+}
+.content img {
+  height: 80%;
+  width: 100%;
+  visibility: visible;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.context {
+  position: absolute;
+  padding: 20px;
+  top: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+}
+.context p {
+  color: #131112;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+.context span {
+  color: red;
+  font-size: 2rem;
+}
+.box {
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: none;
+  position: relative;
+}
+.container img {
+  height: 600px;
+  height: 600px;
+  position: absolute;
+  bottom: -250px;
+  transform: translateX(-100px);
+}
+.text {
+  width: 600px;
+  position: absolute;
+  /* background:  linear-gradient( to right, #a8e2a8 , #2cccff );; */
+  font-size: 2rem;
+  padding: 20px;
+  border-radius: 20px 10px;
+  top: -220px;
+  transform: translateX(-100px);
+  animation: ani 3s ease;
+}
+
+.container .btn {
+  position: relative;
+  transform: translate(50px, 250px);
+  margin-right: 10px;
+}
+.box {
+  width: 400px;
+  display: none;
+  overflow: hidden;
+  position: relative;
+  top: 230px;
+  left: 200px;
+}
+.box p {
+  font-size: 2rem;
+  text-align: center;
+}
+@keyframes ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.block {
+  display: flex;
+}
+.display {
+  display: none;
+}

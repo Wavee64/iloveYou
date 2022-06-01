@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I Love u</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="warper">
+      <div class="snow"></div>
+    <div class="list">
+      <p>Chào em</p>
+      <button class="btn">Click vào đây nè !!</button>
+    </div>
+    <div class="content">
+      <img src="./1.jpg" alt="" />
+      <div class="context">
+        <p>Chào em gái <span>Xinh đẹp</span> của anh</p>
+        <p>Anh chờ em từ rất lâu rồi đó </p>
+      </div>
+      <button class="btn next">Click tiếp vào đây nha !!</button>
+    </div>
+   <div class="container">
+     <img src="./2.jpg" alt="" />
+     <div class="text">
+       <p>Em đồng ý Làm <span>Người Yêu</span> của Anh nha !!</p>
+     </div>
+     <button class="btn nexts">Đồng ý!!</button>
+     <button class="btn nextes">Không!!</button>
+   </div>
+    <div class="box">
+     <img src="./3.jpg" alt="">
+     <p>Chọn đúng rồi đó !!</p>
+     <p>Chào mừng em về đội của anh <3 </p>
+</div>
+<div class="box box2">
+  <img src="./de.jpg" alt="">
+  <p>Chọn sai rồi . Đúng là cái đồ đáng ghét mà @@@ </p>
+  <p>Chọn lại nhanh !!</p>
+  
+</div>
+     </div>
+    </div>
+  </body>
+
+  <script>
+
+const btn = document.querySelector('.btn')
+const btn2 = document.querySelector('.next')
+const btn3 = document.querySelector('.nexts')
+const btn4 = document.querySelector('.nextes')
+
+const list = document.querySelector('.list')
+
+// const block = document.querySelector('.block')
+const content = document.querySelector('.content')
+const container = document.querySelector('.container')
+const box = document.querySelector('.box')
+const box2 = document.querySelector('.box2')
+
+
+
+btn.addEventListener('click' , (e)=>{
+ content.classList.add('block');
+ list.classList.add('display');
+} );
+btn2.addEventListener('click' , (e)=>{
+ content.classList.add('display');
+ container.classList.add('block');
+} );
+btn3.addEventListener('click' , (e)=>{
+     container.classList.add('display');
+ box.classList.add('block');
+} )
+btn4.addEventListener('click' , (e)=>{
+     container.classList.add('display');
+ box2.classList.add('block');
+} )
+
+
+
+</script>
+</html>
